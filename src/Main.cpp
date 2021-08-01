@@ -5,6 +5,7 @@
 #include "httpserver.h"
 
 int main() {
+  auto token = getenv("PASSWORD");
   http_server_listen(http_server_init(80, [](http_request_s *const request) {
     auto response = http_response_init();
     std::string text = "asa";
